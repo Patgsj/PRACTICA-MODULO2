@@ -1,22 +1,11 @@
-$(document).ready(function(){
-    function mostrar(valor) {
-        $('#resultado').html(valor);
+$(document).ready(function() {
+    function actualizarResultado(selector, valor) {
+        $(selector).html(valor);
     }
-    $('#Nombre').on('keyup', function() {
-        mostrar($(this).val());
+
+    $('.input-monitoreo').on('input', function() {
+        const valor = $(this).val();
+        const target = $(this).data('target');
+        actualizarResultado(target, valor);
     });
-    
-    function emailRegistro(valor) {
-        $('#resultadoEmail').html(valor);
-    }
-    $('#Email').on('keyup', function() {
-        emailRegistro($(this).val());
-    });
-    
-    function MensajeRegistro(valor) {
-        $('#resultadoTextArea').html(valor);
-    }
-    $('#floatingTextarea').on('keyup', function() {
-        MensajeRegistro($(this).val());
-    });
-})
+});
