@@ -13,14 +13,14 @@
 
 $(document).ready(function() {
     $('form').on('submit', function(event) {
-        event.preventDefault(); // Evita el envío del formulario
+        event.preventDefault(); 
         
-        // Obtener Valores
-        var nombre = $('#Nombre').val().trim(); // .trim() para eliminar espacios en blanco
+        
+        var nombre = $('#Nombre').val().trim(); 
         var email = $('#Email').val().trim();
         var mensaje = $('#floatingTextarea').val().trim();
         
-        // Verificar si los campos están completos
+        
         if (nombre === '' || email === '' || mensaje === '') {
             
             Swal.fire({
