@@ -1,1 +1,5 @@
-
+@media (max-width: 991px){
+    .column-resumen{
+        margin-top: 10px;
+    }
+}
