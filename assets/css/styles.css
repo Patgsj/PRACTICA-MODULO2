@@ -1,5 +1,17 @@
+
+.contenido{
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
 @media (max-width: 991px){
+    .contenido{
+        padding-left: 3vh;
+        padding-right: 3vh;
+    }
     .column-resumen{
         margin-top: 40px;
     }
+
+
 }
