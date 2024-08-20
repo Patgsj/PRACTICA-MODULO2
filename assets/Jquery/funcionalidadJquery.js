@@ -22,7 +22,28 @@ $(document).ready(function() {
         
         // Verificar si los campos están completos
         if (nombre === '' || email === '' || mensaje === '') {
-            alert('Por favor, complete todos los campos antes de enviar.');
+            
+            Swal.fire({
+                title: "Te faltan datos",
+                text: "Termina de completarlos",
+                icon: "warning",
+                showClass: {
+                  popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `
+                },
+                hideClass: {
+                  popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `
+                },
+                confirmButtonColor: "#3085d6",
+                confirmButtonText: "Aceptar"
+            });
         } else {
             // Captar los elementos de los Inputs
             $('#resultado').text(nombre);
